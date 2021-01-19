@@ -14,6 +14,7 @@ class UsersController < ApplicationController
    #Strong Parametersの実装  
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       #succes
       redirect_to @user
