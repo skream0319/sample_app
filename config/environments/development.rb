@@ -24,6 +24,11 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
+  # ここをコピペすると失敗します。自分の環境のホストに変えてください。
+    host = 'f15bd587f52d4f1998802261e5b11946.vfs.cloud9.ap-northeast-1.amazonaws.com'
+  # ここをコピペすると失敗します。自分の環境のホストに変えてください。
+  # クラウドIDEの場合は以下をお使いください
+    config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
     config.cache_store = :null_store
   end
